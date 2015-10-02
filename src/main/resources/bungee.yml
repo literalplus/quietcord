@@ -1,0 +1,4 @@
+name: QuietCord
+version: @version@
+main: io.github.xxyy.quietcord.QuietCordPlugin
+author: Literallie

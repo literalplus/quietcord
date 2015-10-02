@@ -1,0 +1,41 @@
+# QuietCord configuration file
+# Refer to https://github.com/xxyy/quietcord for help.
+# If you have not idea, try joining #lit on irc.spi.gt, asking for help
+# and patiently waiting for a reply. If the word 'IRC client' does not
+# mean anything to you, open this link in your web browser of choice:
+# https://irc.spi.gt/iris/?channels=lit
+
+# Note: People might get confused if the messages filtered by this plugin
+#        are missing in your log files. When troubleshooting or debugging,
+#        it is recommended to temporarily disable this plugin.
+# To disable the plugin entirely, set this to true:
+disable: false
+
+# Let's configure what you want to filter
+filter:
+    # Filters related to InitalHandler
+    initialhandler:
+      # Do you want to filter InitialHandler ping messages? (true/false)
+      # These are lines written to the log every time a player opens their server
+      # list with your network in it. Since this produces a lot of spam and provides
+      # few useful information, it is recommended to turn this filter on. (the default)
+      #
+      # Here's what the filtered messages look like:
+      # 18:17:51 [INFO] [/127.0.0.1:50046] <-> InitialHandler has connected
+      ping: true
+
+      # Do you want to filter InitialHandler join messages? (true/false)
+      # These lines are written to the log every time a player actively joins
+      # your network. While, normally, you do not really need those, since
+      # another message is printed when the player is connected to a server.
+      # These messages can be helpful for understanding what is happening, so
+      # consider turning this filter off. (the default) This option is mainly
+      # intended for when you have a plugin printing an informational message
+      # at every join, so the InitialHandler message is implied. (e.g. BungeePerms)
+      #
+      # Here's what the filtered messages look like:
+      # 18:17:59 [INFO] [Literallie] <-> InitialHandler has connected
+      join: false
+
+# That's it for now.
+config-version: 1

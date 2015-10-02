@@ -1,3 +1,8 @@
+# IntelliJ
+*.iml
+.idea
+
+# Gradle
 .gradle
 build/
 
