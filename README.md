@@ -12,6 +12,10 @@ You open an issue with BungeeCord, but [nothing happens](https://github.com/Spig
 You end up endlessly scrolling through your logs because `grep` is too hard for you
 and your dumb server owner doesn't allow you to Install Gentoo™?
 
+Are you sick of your [BungeeCord](https://github.com/SpigotMC/BungeeCord) logs looking like this?
+
+![a log with a lot of InitialHandler spam](https://github.com/xxyy/quietcord/raw/master/screenshots/initialhandler-spam.png)
+
 Well now there's a solution!
 
 **Introducing: QuietCord** (todo: inspirational image)
@@ -28,6 +32,12 @@ Well now there's a solution!
  * web-scale!!! (that's a lie)
  * has cakes!!!!!!
  * Chuck Norris would probably approve!!!!
+
+With this, your logs can look like this again:
+
+![a clean log!!!!](https://github.com/xxyy/quietcord/raw/master/screenshots/clean-log.png)
+
+Isn't that the dream of every singl BungeeCord admin out there? Yes? No?? Then this plugin is the right tool for you!
  
 # Installation
 
