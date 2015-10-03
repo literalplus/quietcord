@@ -8,7 +8,6 @@ import net.md_5.bungee.config.YamlConfiguration;
 
 import io.github.xxyy.quietcord.filter.InitialHandlerFilter;
 import io.github.xxyy.quietcord.filter.InjectableFilter;
-import io.github.xxyy.quietcord.lib.io.github.xxyy.common.version.PluginVersion;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -44,7 +43,6 @@ public class QuietCordPlugin extends Plugin {
 
         filter = new InitialHandlerFilter(this);
         filter.inject();
-        getLogger().info("Enabled " + PluginVersion.ofClass(getClass()).toString());
     }
 
     @Override
