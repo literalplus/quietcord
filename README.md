@@ -1,4 +1,4 @@
-# QuietCord
+# QuietCord [![Build Status](https://ci.nowak-at.net/job/public~quietcord/badge/icon)](https://ci.nowak-at.net/job/public~quietcord)
 A simple BungeeCord plugin which aims to reduce log spam caused by InitialHandler.
 
 # User Story
@@ -10,7 +10,7 @@ set up a custom log for your plugin?
 You open an issue with BungeeCord, but [nothing happens](https://github.com/SpigotMC/BungeeCord/pull/1484)??
 
 You end up endlessly scrolling through your logs because `grep` is too hard for you
-and installing Gentoo is not an option?
+and your dumb server owner doesn't allow you to Install Gentoo™?
 
 Well now there's a solution!
 
@@ -18,7 +18,7 @@ Well now there's a solution!
 
 # Features
 
- * Blocks these useless InitialHandler has connected messages
+ * Blocks these useless `InitialHandler has connected` messages
  * configurable
  * Probably doesn't impact performance too much!
  * has unit tests!!
@@ -27,11 +27,13 @@ Well now there's a solution!
  * no ProtocolLib!!
  * web-scale!!! (that's a lie)
  * has cakes!!!!!!
+ * Chuck Norris would probably approve!!!!
  
 # Installation
+
+Download the latest binaries from [my Continous Integration server](https://ci.nowak-at.net/job/public~quietcord/). Note that these are development builds and may not be stable for use in a Production environment.
  
-Currently, you'll have to build this yourself. Get a Linux box running, or if you
- really have to, use Cygwin. Execute:
+If you are afraid that the binaries provided are malicious, are passionate about your freedom or just like compiling things, you can also compile from source. Since Gradle is cross-platform, you can run builds on a lot of platforms. If you happen to use Linux, try the following: (If not, you should definitely reconsider your OS choice)
   
 ````bash
 git clone git@github.com:xxyy/quietcord.git
@@ -39,16 +41,11 @@ cd quietcord
 ./gradlew
 ````
 
-(Alternatively, you can use `gradlew.bat` on Windows, but that's not supported.
- Install Gentoo. (Actually, install Arch Linux))
- 
-(In the future, there will be a build server and a Spigot Resource)
-
-(Alternatively, try the [development builds](https://repo.nowak-at.net/xxyy-public/io/github/xxyy/quietcord/))
+(If you love being controlled by monopolies, you can also compile this on your Microsoft® Windows®-based computer. Further instructions are not detailed here because of ethical reasons. (`gradlew.bat`))
  
 # Configuration
 
-Look at `plugins/QuietCord/config.yml`. If you don't understand that, it has information
+Look at [`plugins/QuietCord/config.yml`](https://github.com/xxyy/quietcord/blob/master/src/main/resources/config.default.yml). If you don't understand that, it has information
 at the top on how to get help.
 
 # License
