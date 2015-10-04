@@ -31,6 +31,7 @@ public class IHResetByPeerFilter extends PropagatingFilter {
     @Override
     @SuppressWarnings("SimplifiableIfStatement")
     public boolean isLoggable(LogRecord record) {
+        //BungeeCord source: https://github.com/SpigotMC/BungeeCord/blob/master/proxy/src/main/java/net/md_5/bungee/netty/HandlerBoss.java#L109
         return !filterResetByPeer || //we might not even be filtering
                 !"{0} - IOException: {1}".equals(record.getMessage()) || //wrong message
                 record.getParameters().length != 2 || //that message always has exactly two arguments

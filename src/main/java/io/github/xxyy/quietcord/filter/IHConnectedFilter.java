@@ -31,6 +31,7 @@ public class IHConnectedFilter extends PropagatingFilter {
     @Override
     @SuppressWarnings("SimplifiableIfStatement")
     public boolean isLoggable(LogRecord record) {
+        //BungeeCord source: https://github.com/SpigotMC/BungeeCord/blob/master/proxy/src/main/java/net/md_5/bungee/connection/InitialHandler.java#L275
         if ((!filterPings && !filterJoins) || //nothing to filter
                 !"{0} has connected".equals(record.getMessage()) || //wrong message
                 record.getParameters().length != 1 //that message always has exactly one argument
