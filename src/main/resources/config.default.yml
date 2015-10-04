@@ -37,5 +37,24 @@ filter:
       # 18:17:59 [INFO] [Literallie] <-> InitialHandler has connected
       join: false
 
+      # Do you want to ignore connection reset errors for InitialHandler? (true/false)
+      # Normally, this shouldn't be necessary at all, but apparently there are cases
+      # where this could be safely ignored. Not normally though. If you get error
+      # messages like this: (filtered by this filter)
+      # [WARNING] [/127.0.0.1:50046] <-> InitialHandler - IOException: Connection reset by peer
+      # Then FIRST try setting connection-throttle to -1 in BOTH your BungeeCord's config.yml
+      # and your Spigot's bukkit.yml. If the issue still persists and you are definitely
+      # sure that you want to block these messages, enable the filter below.
+      #
+      # Use of this filter is not recommended, hence the default is false.
+      # Also note that this cannot filter these messages in all cases, since these are produced
+      # by the underlying operation system and that often takes the user language in account.
+      # This should be fine for English systems, but note that this might not work on systems
+      # with other languages. If you still see a message like this in your system language,
+      # change the message below.
+      reset-by-peer: false
+      reset-by-peer-message: "connection reset by peer"
+
 # That's it for now.
 config-version: 1
+debug: false

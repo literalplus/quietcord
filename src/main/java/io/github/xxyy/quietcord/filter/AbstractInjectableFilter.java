@@ -2,6 +2,8 @@ package io.github.xxyy.quietcord.filter;
 
 import com.google.common.base.Preconditions;
 
+import io.github.xxyy.quietcord.QuietCordPlugin;
+
 import java.util.logging.Filter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +37,9 @@ public abstract class AbstractInjectableFilter implements InjectableFilter {
 
         previousFilter = logger.getFilter();
         logger.setFilter(this);
-        logger.log(Level.INFO, "[QuietCord] This logger is now filtered by {0}", this);
+        if (QuietCordPlugin.DEBUG_MODE) {
+            logger.log(Level.INFO, "[QuietCord] This logger is now filtered by {0}", this);
+        }
         return logger.getFilter();
     }
 

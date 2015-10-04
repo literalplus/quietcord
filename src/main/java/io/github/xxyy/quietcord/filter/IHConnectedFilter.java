@@ -8,31 +8,32 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 /**
- * A simple log filter that cancels connection messages from InitialHandler, namely
- * these sent at server list ping.
+ * A simple log filter that cancels messages stating that a client has connected to InitialHandler. These messages are
+ * sent when a client sends a server list request packet (i.e. evey time somebody opens their server list) and when
+ * a client starts its connection to the server.
  *
  * @author <a href="http://xxyy.github.io/">xxyy</a>
  * @since 02/10/15
  */
-public class InitialHandlerFilter extends PropagatingFilter {
+public class IHConnectedFilter extends PropagatingFilter {
     private boolean filterPings;
     private boolean filterJoins;
 
-    public InitialHandlerFilter(QuietCordPlugin plugin) {
+    public IHConnectedFilter(QuietCordPlugin plugin) {
         super(plugin.getProxy().getLogger());
         loadConfig(plugin.getConfig());
     }
 
-    InitialHandlerFilter(Logger logger) { //for unit tests
+    IHConnectedFilter(Logger logger) { //for unit tests
         super(logger);
     }
 
     @Override
     @SuppressWarnings("SimplifiableIfStatement")
     public boolean isLoggable(LogRecord record) {
-        if (!"{0} has connected".equals(record.getMessage()) || //wrong message
-                record.getParameters().length != 1 || //that message always has exactly one argument
-                (!filterPings && !filterJoins) //nothing to filter
+        if ((!filterPings && !filterJoins) || //nothing to filter
+                !"{0} has connected".equals(record.getMessage()) || //wrong message
+                record.getParameters().length != 1 //that message always has exactly one argument
                 ) {
             return true;
         }
@@ -62,7 +63,7 @@ public class InitialHandlerFilter extends PropagatingFilter {
 
     @Override
     public String toString() {
-        return "InitialHandlerFilter{" +
+        return "IHConnectedFilter{" +
                 "filterPings=" + filterPings +
                 ", filterJoins=" + filterJoins +
                 '}';

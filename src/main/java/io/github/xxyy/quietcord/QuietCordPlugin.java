@@ -6,7 +6,8 @@ import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
 
-import io.github.xxyy.quietcord.filter.InitialHandlerFilter;
+import io.github.xxyy.quietcord.filter.IHConnectedFilter;
+import io.github.xxyy.quietcord.filter.IHResetByPeerFilter;
 import io.github.xxyy.quietcord.filter.InjectableFilter;
 
 import java.io.File;
@@ -14,6 +15,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Plugin class for the QuietCord BungeeCord plugin, used for interfacing with
@@ -23,8 +26,9 @@ import java.io.OutputStream;
  * @since 2015-10-02
  */
 public class QuietCordPlugin extends Plugin {
+    public static boolean DEBUG_MODE = false;
+    private List<InjectableFilter> filters = new LinkedList<>();
     private Configuration config;
-    private InjectableFilter filter;
 
     @Override
     public void onEnable() {
@@ -41,13 +45,24 @@ public class QuietCordPlugin extends Plugin {
             return;
         }
 
-        filter = new InitialHandlerFilter(this);
-        filter.inject();
+        if (DEBUG_MODE = config.getBoolean("debug", false)) { //set and get, hehe
+            getLogger().info("QuietCord is running in debug mode! This is not recommended for Production environments.");
+        }
+
+        filters.clear();
+        filters.add(new IHConnectedFilter(this));
+        filters.add(new IHResetByPeerFilter(this));
+
+        for (InjectableFilter filter : filters) {
+            filter.inject();
+        }
     }
 
     @Override
     public void onDisable() {
-        filter.reset(); //Prints a message on its own
+        for (InjectableFilter filter : filters) {
+            filter.reset(); //Prints a message on its own on error
+        }
     }
 
     private void loadConfig() throws IOException {
