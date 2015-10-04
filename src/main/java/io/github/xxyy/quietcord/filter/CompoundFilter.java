@@ -1,5 +1,6 @@
 package io.github.xxyy.quietcord.filter;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class CompoundFilter extends AbstractInjectableFilter {
 
     public CompoundFilter(Logger logger, List<Filter> filters) {
         super(logger);
-        this.filters = filters;
+        this.filters = new ArrayList<>(filters); //who knows what the caller might pass (e.g. Arrays.asList(...))
     }
 
     @Override
