@@ -41,6 +41,8 @@ Isn't that the dream of every singl BungeeCord admin out there? Yes? No?? Then t
  
 # Installation
 
+Get official releases at [SpigotMC](https://www.spigotmc.org/resources/quietcord.12940/).
+
 Download the latest binaries from [my Continous Integration server](https://ci.nowak-at.net/job/public~quietcord/). Note that these are development builds and may not be stable for use in a Production environment.
  
 If you are afraid that the binaries provided are malicious, are passionate about your freedom or just like compiling things, you can also compile from source. Since Gradle is cross-platform, you can run builds on a lot of platforms. If you happen to use Linux, try the following: (If not, you should definitely reconsider your OS choice)
