@@ -35,7 +35,7 @@ public class IHResetByPeerFilter extends PropagatingFilter {
         return !filterResetByPeer || //we might not even be filtering
                 !"{0} - IOException: {1}".equals(record.getMessage()) || //wrong message
                 record.getParameters().length != 2 || //that message always has exactly two arguments
-                !"InitialHandler".equals(String.valueOf(record.getParameters()[0])) || //first arg is handler
+                !String.valueOf(record.getParameters()[0]).endsWith("InitialHandler") || //first arg is handler
                 !resetByPeerMessage.equals(String.valueOf(record.getParameters()[1])); //second arg is message
     }
 

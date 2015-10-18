@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class IHResetByPeerFilterTest {
-    public static final String INITIAL_HANDLER = "InitialHandler";
+    public static final String INITIAL_HANDLER = "[/127.0.0.1:12345] <-> InitialHandler";
     public static final String ARBITRARY_MESSAGE = "Enabled plugin {0} version {1}";
     public static final String IO_EXCEPTION_MSG = "{0} - IOException: {1}";
     public static final String RESET_BY_PEER_EN = IHResetByPeerFilter.DEFAULT_MESSAGE;
