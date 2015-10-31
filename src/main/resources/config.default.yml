@@ -48,6 +48,11 @@ filter:
       # Then FIRST try setting connection-throttle to -1 in BOTH your BungeeCord's config.yml
       # and your Spigot's bukkit.yml. If the issue still persists and you are definitely
       # sure that you want to block these messages, enable the filter below.
+      # Also make sure you exactly know what connection-throttle does before setting it to -1.
+      #
+      # Professional developer Janmm14, however, suggests leaving connection-throttle at the 
+      # default value. So if it does not fix your issue, make sure to reset it or he will
+      # haunt you in your dreams: https://github.com/xxyy/quietcord/issues/4
       #
       # Use of this filter is not recommended, hence the default is false.
       # Also note that this cannot filter these messages in all cases, since these are produced
