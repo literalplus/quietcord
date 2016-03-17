@@ -9,7 +9,7 @@ set up a custom log for your plugin?
 
 You open an issue with BungeeCord, but [nothing happens](https://github.com/SpigotMC/BungeeCord/pull/1484)??
 
-You end up endlessly scrolling through your logs because `grep` is too hard for you
+You end up endlessly scrolling through your logs because `grep` is too difficult for you
 and your dumb server owner doesn't allow you to Install Gentoo™?
 
 Are you sick of your [BungeeCord](https://github.com/SpigotMC/BungeeCord) logs looking like this?
