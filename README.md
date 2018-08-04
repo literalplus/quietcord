@@ -1,4 +1,4 @@
-# QuietCord [![Build Status](https://ci.nowak-at.net/job/public~quietcord/badge/icon)](https://ci.nowak-at.net/job/public~quietcord)
+# QuietCord [![Build Status](https://ci.l1t.li/job/public~quietcord/badge/icon)](https://ci.l1t.li/job/public~quietcord)
 A simple BungeeCord plugin which aims to reduce log spam caused by InitialHandler.
 
 # User Story
