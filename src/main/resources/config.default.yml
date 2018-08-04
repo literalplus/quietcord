@@ -1,16 +1,12 @@
 # QuietCord configuration file
 # Refer to https://github.com/xxyy/quietcord for help.
-# If you have not idea, try joining #lit on irc.spi.gt, asking for help
-# and patiently waiting for a reply. If the word 'IRC client' does not
-# mean anything to you, open this link in your web browser of choice:
-# https://irc.spi.gt/iris/?channels=lit
-#
-# If you don't get any reply there, please open an issue at
+# If you have not idea, please open an issue at
 # https://github.com/xxyy/quietcord/issues
 
 # Note: People might get confused if the messages filtered by this plugin
 #        are missing in your log files. When troubleshooting or debugging,
 #        it is recommended to temporarily disable this plugin.
+#        (except if you're debugging this plugin itself, obviously)
 # To disable the plugin entirely, set this to true:
 disable: false
 
@@ -30,8 +26,8 @@ filter:
       # Do you want to filter InitialHandler join messages? (true/false)
       # These lines are written to the log every time a player actively joins
       # your network. While, normally, you do not really need those, since
-      # another message is printed when the player is connected to a server.
-      # These messages can be helpful for understanding what is happening, so
+      # another message is printed when the player is connected to a server,
+      # these messages can be helpful for understanding what is happening, so
       # consider turning this filter off. (the default) This option is mainly
       # intended for when you have a plugin printing an informational message
       # at every join, so the InitialHandler message is implied. (e.g. BungeePerms)
