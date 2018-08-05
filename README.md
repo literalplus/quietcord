@@ -1,7 +1,7 @@
-# QuietCord [![Build Status](https://ci.l1t.li/job/public~quietcord/badge/icon)](https://ci.l1t.li/job/public~quietcord)
+# 💤 QuietCord [![Build Status](https://ci.l1t.li/job/public~quietcord/badge/icon)](https://ci.l1t.li/job/public~quietcord)
 A simple BungeeCord plugin which aims to reduce log spam caused by InitialHandler.
 
-# User Story
+# 📖 User Story
 Don't you know this problem?
 
 You want to find some useful information in your BungeeCord log and are too lazy to
@@ -20,7 +20,7 @@ Well, now there's a solution!
 
 **Introducing: QuietCord** (todo: inspirational image)
 
-# Features
+# ➕ Features
 
  * Blocks spammy `InitialHandler has connected` messages
  * configurable
@@ -45,7 +45,7 @@ No??
 
 Then this plugin is right for you!
  
-# Installation
+# 🏗 Installation
 
 Get official releases at [SpigotMC](https://www.spigotmc.org/resources/quietcord.12940/).
 
@@ -61,11 +61,11 @@ cd quietcord
 
 (If you love being controlled by monopolies, you can also compile this on your Microsoft® Windows®-based computer. Further instructions are not detailed here for ethical reasons. (`gradlew.bat`))
  
-# Configuration
+# ⚙ Configuration
 
 Look at [`plugins/QuietCord/config.yml`](https://github.com/xxyy/quietcord/blob/master/src/main/resources/config.default.yml). If you don't understand that, open an issue on GitHub.
 
-# License
+# ⚖ License
 
 This project is licensed under the MIT license. 
 [Refer to the LICENSE file for details.](https://github.com/xxyy/quietcord/blob/master/LICENSE)
