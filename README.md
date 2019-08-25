@@ -51,15 +51,13 @@ Get official releases at [SpigotMC](https://www.spigotmc.org/resources/quietcord
 
 Download the latest binaries from [my Continous Integration server](https://ci.l1t.li/job/public~quietcord/). Note that these are development builds and may not be stable for use in a Production environment.
  
-If you are afraid that the binaries provided are malicious, are passionate about your freedom, or just love compiling things, you can also compile from source. Since Gradle is cross-platform, you can run builds on a lot of platforms. If you happen to use GNU/Linux, try the following: (If not, you should definitely reconsider your OS choice)
+If you are afraid that the binaries provided are malicious, are passionate about your freedom, or just love compiling things, you can also compile from source. Since Gradle is cross-platform, you can run builds on a lot of platforms. If you happen to use GNU/Linux, try the following:
   
 ````bash
 git clone git@github.com:xxyy/quietcord.git
 cd quietcord
 ./gradlew
 ````
-
-(If you love being controlled by monopolies, you can also compile this on your Microsoft® Windows®-based computer. Further instructions are not detailed here for ethical reasons. (`gradlew.bat`))
  
 # ⚙ Configuration
 
