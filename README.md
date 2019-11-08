@@ -1,4 +1,4 @@
-# 💤 QuietCord [![Build Status](https://ci.l1t.li/job/public~quietcord/badge/icon)](https://ci.l1t.li/job/public~quietcord)
+# 💤 QuietCord [![Build Status](https://ci.lit.plus/job/public~quietcord/badge/icon)](https://ci.lit.plus/job/public~quietcord)
 A simple BungeeCord plugin which aims to reduce log spam caused by InitialHandler.
 
 # 📖 User Story
@@ -14,7 +14,7 @@ and your clueless server owner doesn't allow you to Install Gentoo™?
 
 Are you sick of your [BungeeCord](https://github.com/SpigotMC/BungeeCord) logs looking like this?
 
-![a log with a lot of InitialHandler spam](https://github.com/xxyy/quietcord/raw/master/screenshots/initialhandler-spam.png)
+![a log with a lot of InitialHandler spam](https://github.com/literalplus/quietcord/raw/master/screenshots/initialhandler-spam.png)
 
 Well, now there's a solution!
 
@@ -35,7 +35,7 @@ Well, now there's a solution!
 
 With this, your logs can look like this again:
 
-![a clean log!!!!](https://github.com/xxyy/quietcord/raw/master/screenshots/clean-log.png)
+![a clean log!!!!](https://github.com/literalplus/quietcord/raw/master/screenshots/clean-log.png)
 
 Isn't that the dream of every single BungeeCord admin out there?
 
@@ -49,21 +49,21 @@ Then this plugin is right for you!
 
 Get official releases at [SpigotMC](https://www.spigotmc.org/resources/quietcord.12940/).
 
-Download the latest binaries from [my Continous Integration server](https://ci.l1t.li/job/public~quietcord/). Note that these are development builds and may not be stable for use in a Production environment.
+Download the latest binaries from [my Continous Integration server](https://ci.lit.plus/job/public~quietcord/). Note that these are development builds and may not be stable for use in a Production environment.
  
 If you are afraid that the binaries provided are malicious, are passionate about your freedom, or just love compiling things, you can also compile from source. Since Gradle is cross-platform, you can run builds on a lot of platforms. If you happen to use GNU/Linux, try the following:
   
 ````bash
-git clone git@github.com:xxyy/quietcord.git
+git clone git@github.com:literalplus/quietcord.git
 cd quietcord
 ./gradlew
 ````
  
 # ⚙ Configuration
 
-Look at [`plugins/QuietCord/config.yml`](https://github.com/xxyy/quietcord/blob/master/src/main/resources/config.default.yml). If you don't understand that, open an issue on GitHub.
+Look at [`plugins/QuietCord/config.yml`](https://github.com/literalplus/quietcord/blob/master/src/main/resources/config.default.yml). If you don't understand that, open an issue on GitHub.
 
 # ⚖ License
 
 This project is licensed under the MIT license. 
-[Refer to the LICENSE file for details.](https://github.com/xxyy/quietcord/blob/master/LICENSE)
+[Refer to the LICENSE file for details.](https://github.com/literalplus/quietcord/blob/master/LICENSE)
